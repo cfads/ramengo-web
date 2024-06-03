@@ -42,114 +42,15 @@
             <h1 class="m-plus-rounded-1c-black text-preta text-center">First things first: select your favorite broth.</h1>
             <p class="m-plus-rounded-1c-regular text-center">It will give the whole flavor on your ramen soup.</p>
 
-            <ul id="listaCaldos" class="listOrder">
-              <li>
-                <input type="radio" name="caldo" value="1" id="sal" />
-                <label for="sal">
-                  <div>
-                    <img src="assets/icons/salt-inactive.svg" alt="Imagem de Sal" />
-                    <h6 class="m-plus-rounded-1c-black text-primaria">Salt</h6>
-                    <p class="m-plus-rounded-1c-regular text-preta">Simple like the seawater, nothing more</p>
-                  </div>
-                  <div>
-                    <span class="m-plus-rounded-1c-black text-secundaria"> US$ 10 </span>
-                  </div>
-                </label>
-              </li>
-
-              <li>
-                <input type="radio" name="caldo" value="2" id="shoyu" />
-                <label for="shoyu">
-                  <div>
-                    <img src="assets/icons/shoyu-inactive.svg" alt="Imagem de Shoyu" />
-                    <h6 class="m-plus-rounded-1c-black text-primaria">Shoyu</h6>
-                    <p class="m-plus-rounded-1c-regular text-preta">The good old and traditional soy sauce</p>
-                  </div>
-                  <div>
-                    <span class="m-plus-rounded-1c-black text-secundaria">US$ 10</span>
-                  </div>
-                </label>
-              </li>
-
-              <li>
-                <input type="radio" name="caldo" value="3" id="miso" />
-                <label for="miso">
-                  <div>
-                    <img src="assets/icons/miso-inactive.svg" alt="Imagem de Miso" />
-                    <h6 class="m-plus-rounded-1c-black text-primaria">Miso</h6>
-                    <p class="m-plus-rounded-1c-regular text-preta">Paste made of fermented soybeans</p>
-                  </div>
-                  <div>
-                    <span class="m-plus-rounded-1c-black text-secundaria"> US$ 12 </span>
-                  </div>
-                </label>
-              </li>
-            </ul>
-
-            <div class="radioCarousel">
-              <input type="radio" id="caldoSelect0" name="caldoSelect" value="0" />
-              <label for="caldoSelect0"> </label>
-              <input type="radio" id="caldoSelect1" name="caldoSelect" value="1" />
-              <label for="caldoSelect1"> </label>
-              <input type="radio" id="caldoSelect2" name="caldoSelect" value="2" />
-              <label for="caldoSelect2"> </label>
-            </div>
+            <ul id="listaCaldos" class="listOrder"></ul>
+            <div id="radioCarouselBroth" class="radioCarousel"></div>
 
             <h1 class="m-plus-rounded-1c-black text-preta text-center">It’s time to choose (or not) your meat!</h1>
             <p class="m-plus-rounded-1c-regular text-center">Some people love, some don’t. We have options for all tastes.</p>
 
-            <ul id="listaProteinas" class="listOrder">
-              <li>
-                <input type="radio" name="carne" value="1" id="chasu" />
-                <label for="chasu">
-                  <div>
-                    <img src="assets/icons/pork-inactive.svg" alt="Imagem de Chasu" />
-                    <h6 class="m-plus-rounded-1c-black text-primaria">Chasu</h6>
-                    <p class="m-plus-rounded-1c-regular text-preta">A sliced flavourful pork meat with a selection of season vegetables.</p>
-                  </div>
-                  <div>
-                    <span class="m-plus-rounded-1c-black text-secundaria"> US$ 10 </span>
-                  </div>
-                </label>
-              </li>
+            <ul id="listaProteinas" class="listOrder"></ul>
 
-              <li>
-                <input type="radio" name="carne" value="2" id="yasai" />
-                <label for="yasai">
-                  <div>
-                    <img src="assets/icons/yasai-inactive.svg" alt="Imagem de Yasai vegetarian" />
-                    <h6 class="m-plus-rounded-1c-black text-primaria">Yasai Vegetarian</h6>
-                    <p class="m-plus-rounded-1c-regular text-preta">A delicious vegetarian lamen with a selection of season vegetables.</p>
-                  </div>
-                  <div>
-                    <span class="m-plus-rounded-1c-black text-secundaria">US$ 10</span>
-                  </div>
-                </label>
-              </li>
-
-              <li>
-                <input type="radio" name="carne" value="3" id="karaague" />
-                <label for="karaague">
-                  <div>
-                    <img src="assets/icons/chicken-inactive.svg" alt="Imagem de Karaague" />
-                    <h6 class="m-plus-rounded-1c-black text-primaria">Karaague</h6>
-                    <p class="m-plus-rounded-1c-regular text-preta">Paste made of fermented soybeans</p>
-                  </div>
-                  <div>
-                    <span class="m-plus-rounded-1c-black text-secundaria"> US$ 12 </span>
-                  </div>
-                </label>
-              </li>
-            </ul>
-
-            <div class="radioCarousel">
-              <input type="radio" id="proteinaSelect0" name="proteinaSelect" value="0" />
-              <label for="proteinaSelect0"> </label>
-              <input type="radio" id="proteinaSelect1" name="proteinaSelect" value="1" />
-              <label for="proteinaSelect1"> </label>
-              <input type="radio" id="proteinaSelect2" name="proteinaSelect" value="2" />
-              <label for="proteinaSelect2"> </label>
-            </div>
+            <div id="radioCarouselProtein" class="radioCarousel"></div>
 
             <button type="submit" class="bg-cinzaEscuro">
               <span class="m-plus-rounded-1c-extrabold text-white">PLACE MY ORDER</span>

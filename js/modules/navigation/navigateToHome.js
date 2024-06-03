@@ -1,3 +1,5 @@
+import { FetchBroths } from "../broths/fetchBroths.js";
+import { FetchProteins } from "../broths/fetchProteins.js";
 import { HandleResetHome } from "./handleResetHome.js";
 
 const containerHome = document.getElementById("homeOrder");
@@ -8,4 +10,6 @@ export function NavigateToHome() {
     containerHome.style.display = "block";
     containerProcessed.style.display = "none";
     HandleResetHome();
+    FetchBroths();
+    FetchProteins();
 }

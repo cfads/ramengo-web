@@ -1,8 +1,7 @@
 import { DeactivateImages } from "../modules/utils/deactivateImages.js";
 
-const radios = document.querySelectorAll('input[type="radio"][name="carne"]');
-
 export function ChangeImageProteinEvent() {
+    const radios = document.querySelectorAll('input[type="radio"][name="carne"]');
     radios.forEach((radioEvent) => {
         radioEvent.addEventListener("change", function () {
             const imgElement = document.querySelector("#" + radioEvent.id + " + label div:nth-child(1) img");
