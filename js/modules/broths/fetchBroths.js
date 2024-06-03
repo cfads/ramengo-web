@@ -1,18 +1,31 @@
 import { ChangeImageBrothEvent } from "../../events/changeImageBrothEvent.js";
 import { ChangeRadioBrothEvent } from "../../events/changeRadioBrothEvent.js";
 import { CreateOptionBroth } from "../carousel/createOptionBroth.js";
+import { ErrorLoading } from "../utils/errorLoading.js";
+import { Loader } from "../utils/loader.js";
 
 const listBroths = document.getElementById('listaCaldos')
 const radiosSelectCarousel = document.getElementById('radioCarouselBroth')
 
 export async function FetchBroths() {
-    listBroths.innerHTML = '';
+    listBroths.innerHTML = "";
     radiosSelectCarousel.innerHTML = '';
+
+    listBroths.appendChild(Loader())
+    const loader = document.querySelector("#listaCaldos .loader");
 
     const data = await fetch('http://localhost:3000/broths')
         .then(response => response.json())
-        .then(data => data)
-        .catch(error => console.error('Error:', error));
+        .then(data => {
+            loader.style.display = 'none';
+
+            return data
+        })
+        .catch(error => {
+            loader.style.display = 'none';
+
+            listBroths.appendChild(ErrorLoading("Unable to load available broths."))
+        });
 
     if (!data) return
 

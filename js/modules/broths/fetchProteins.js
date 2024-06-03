@@ -1,6 +1,8 @@
 import { ChangeImageProteinEvent } from "../../events/changeImageProteinEvent.js";
 import { ChangeRadioProteinEvent } from "../../events/changeRadioProteinEvent.js";
 import { CreateOptionProtein } from "../carousel/createOptionProtein.js";
+import { ErrorLoading } from "../utils/errorLoading.js";
+import { Loader } from "../utils/loader.js";
 
 const listProteins = document.getElementById('listaProteinas')
 const radiosSelectCarousel = document.getElementById('radioCarouselProtein')
@@ -9,10 +11,21 @@ export async function FetchProteins() {
     listProteins.innerHTML = '';
     radiosSelectCarousel.innerHTML = '';
 
+    listProteins.appendChild(Loader())
+    const loader = document.querySelector("#listaProteinas .loader");
+
     const data = await fetch('http://localhost:3000/proteins')
         .then(response => response.json())
-        .then(data => data)
-        .catch(error => console.error('Error:', error));
+        .then(data => {
+            loader.style.display = 'none';
+
+            return data
+        })
+        .catch(error => {
+            loader.style.display = 'none';
+
+            listProteins.appendChild(ErrorLoading("Unable to load available proteins."))
+        });
 
     if (!data) return
 
