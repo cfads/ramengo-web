@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+body,
+html {
+  background-color: #fff;
+  color: #333;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+:root {
+  --cor-primaria: #1820ef;
+  --cor-secundaria: #ff4e42;
+  --cor-terciaria: #ffc024;
+  --cor-cinza: #fafaed;
+  --cor-preta: #000000;
+  --cinza-escuro: #c5c5c5;
+}
+
+.m-plus-rounded-1c-regular {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-medium {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-extrabold {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-black {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.text-primaria {
+  color: var(--cor-primaria);
+}
+
+.text-secundaria {
+  color: var(--cor-secundaria);
+}
+
+.text-terciaria {
+  color: var(--cor-terciaria);
+}
+
+.text-cinza {
+  color: var(--cor-cinza);
+}
+
+.text-preta {
+  color: var(--cor-preta);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-cinza {
+  background-color: var(--cor-cinza);
+}
+
+.bg-cinzaEscuro {
+  background-color: var(--cinza-escuro);
+}
+
+.container {
+  padding: 6rem 0;
+  width: 90%;
+  margin: auto;
+}
+
+nav {
+  position: absolute;
+  padding: 44px 40px;
+}
+
+#logo {
+  cursor: pointer;
+}
+
+#apresentacao {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("assets/background/pattern-vermelha.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#HeroEntregadora {
+  position: absolute;
+  margin: 72px auto;
+  display: flex;
+  align-items: center;
+}
+
+#HeroEntregadora div:nth-child(1) {
+  position: absolute;
+  left: -170px;
+  bottom: 100px;
+}
+
+#ImgEntregadora {
+  width: 100%;
+}
+
+#HeroEntregadora div:nth-child(1) > span:nth-child(1) {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  cursor: pointer;
+  font-size: 46px;
+  line-height: 56px;
+}
+
+#HeroEntregadora div:nth-child(1) span:nth-child(2) {
+  font-size: 160px;
+  line-height: 100px;
+}
+
+#HeroEntregadora div:nth-child(1) p {
+  max-width: 201px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 16px;
+}
+
+#HeroEntregadora button {
+  width: 60%;
+}
+
+.btnPrimary {
+  height: 60px;
+  background: #1820ef;
+  border-radius: 50px;
+  margin-left: 16px;
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#pedido {
+  background-color: var(--cor-cinza);
+}
+
+#pedido h1 {
+  font-size: 32px;
+}
+
+.listOrder {
+  margin: 64px 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.listOrder h6 {
+  font-size: 20px;
+  margin-top: 14px;
+}
+
+li label {
+  padding: 40px;
+  box-shadow: 0px 4px 12px 0px #e0dbbf99;
+  border-radius: 25px;
+  text-align: center;
+  width: 330px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 36px;
+  cursor: pointer;
+}
+
+li label:hover {
+  transform: scale(1.01);
+  transition: ease-in 0.2s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.listOrder input[type="radio"]:checked + label {
+  background-color: var(--cor-primaria);
+}
+
+.listOrder input[type="radio"]:checked + label div:nth-child(1) h6 {
+  color: #ffffff;
+}
+
+.listOrder input[type="radio"]:checked + label div:nth-child(1) p {
+  color: #ffffff;
+}
+
+.listOrder input[type="radio"]:checked + label div:nth-child(2) span {
+  color: var(--cor-terciaria);
+}
+
+.listOrder li label div:nth-child(2) span {
+  font-size: 20px;
+}
+
+li label img {
+  width: 50%;
+  margin: auto;
+}
+
+li label p {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+#pedido button {
+  width: 213px;
+  height: 60px;
+  margin: auto;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#orderProcessed {
+  display: none;
+}
+
+#preparo {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#preparo div:nth-child(1) {
+  background-image: url("assets/background/pattern-azul.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#preparo div:nth-child(1) img {
+  width: 85%;
+  margin-top: -4rem;
+}
+
+#preparo div:nth-child(1) h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+#preparo div:nth-child(1) h2 {
+  width: 50%;
+  text-align: center;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+#preparo div:nth-child(2) {
+  background-color: var(--cor-cinza);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#preparo div:nth-child(2) > img {
+  width: 9%;
+  margin-top: 2rem;
+}
+
+#preparo div:nth-child(2) h3 {
+  margin-top: 1rem;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+#preparo div:nth-child(2) h2 {
+  margin-top: 1.2rem;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+#preparo div:nth-child(2) p {
+  margin-top: 0.6rem;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#preparo div:nth-child(2) button {
+  display: flex;
+  gap: 24px;
+  justify-content: space-around;
+  padding: 0 24px;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    width: 100%;
+  }
+  nav img {
+    margin: auto;
+  }
+
+  #pedido {
+    overflow: hidden;
+  }
+
+  #HeroEntregadora img {
+    width: 60%;
+    margin: 1rem auto;
+  }
+
+  #HeroEntregadora div:nth-child(1) {
+    left: 0;
+    bottom: -300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  #HeroEntregadora div:nth-child(1) > span:nth-child(1) {
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    cursor: pointer;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  #HeroEntregadora div:nth-child(1) span:nth-child(2) {
+    font-size: 124px;
+    line-height: 100px;
+  }
+
+  #HeroEntregadora div:nth-child(1) p {
+    max-width: 75%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 16px;
+  }
+
+  #HeroEntregadora button {
+    display: none;
+  }
+
+  .listOrder {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .listOrder label {
+    width: 300px;
+  }
+
+  .radioCarousel {
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .radioCarousel label::before {
+    content: "";
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 8px;
+    background-color: #e0dbbf;
+  }
+
+  .radioCarousel input[type="radio"]:checked + label::before {
+    background-color: var(--cor-secundaria);
+    width: 36px;
+    transition: ease-in-out 0.3s;
+  }
+
+  #preparo {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+
+  #preparo div:nth-child(1) {
+    height: 100vh;
+  }
+
+  #preparo div:nth-child(1) img {
+    margin-top: 10%;
+    width: 160%;
+    max-width: 160%;
+  }
+
+  #preparo div:nth-child(1) h3 {
+    font-size: 20px;
+  }
+
+  #preparo div:nth-child(1) h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 1rem;
+    width: 80%;
+  }
+
+  #preparo div:nth-child(2) {
+    height: 100vh;
+    text-align: center;
+  }
+
+  #preparo div:nth-child(2) > img {
+    width: 20%;
+  }
+
+  #preparo div:nth-child(2) h3 {
+    font-size: 20px;
+    line-height: 24px;
+    width: 90%;
+  }
+
+  #preparo div:nth-child(2) h2 {
+    font-size: 24px;
+    line-height: 32px;
+    width: 90%;
+  }
+
+  #preparo div:nth-child(2) p {
+    font-size: 16px;
+    line-height: 24px;
+    width: 90%;
+  }
+}
