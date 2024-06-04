@@ -7,6 +7,7 @@ const containerProcessed = document.getElementById("orderProcessed");
 
 
 export function NavigateToHome() {
+    document.title = 'Home | ramenGo'
     containerHome.style.display = "block";
     containerProcessed.style.display = "none";
     HandleResetHome();

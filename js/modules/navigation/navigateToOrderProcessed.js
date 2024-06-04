@@ -5,6 +5,7 @@ const containerHome = document.getElementById("homeOrder");
 const containerProcessed = document.getElementById("orderProcessed");
 
 export function NavigateToOrderProcessed(responseOrder) {
+    document.title = 'Order Placed | ramenGo'
     window.scrollTo(0, 0);
     if (logo) logo.src = logo.src.replace("logo", "logo_2")
     containerHome.style.display = "none";
