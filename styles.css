@@ -306,7 +306,7 @@ li label p {
 
 #preparo div:nth-child(1) img {
   max-width: 80%;
-  max-height: 800px;
+  max-height: 600px;
   margin-top: -4rem;
 }
 
@@ -551,8 +551,7 @@ li label p {
 
   #preparo div:nth-child(1) img {
     margin-top: 10%;
-    width: 140%;
-    max-width: 160%;
+    max-width: 95%;
   }
 
   #preparo div:nth-child(1) h3 {
@@ -562,7 +561,6 @@ li label p {
   #preparo div:nth-child(1) h2 {
     font-size: 24px;
     line-height: 32px;
-    margin-top: 1rem;
     width: 80%;
   }
 
