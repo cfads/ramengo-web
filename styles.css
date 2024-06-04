@@ -305,7 +305,8 @@ li label p {
 }
 
 #preparo div:nth-child(1) img {
-  width: 85%;
+  max-width: 80%;
+  max-height: 800px;
   margin-top: -4rem;
 }
 
