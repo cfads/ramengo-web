@@ -8,6 +8,7 @@ export function ShowOrderPlaced(responseOrder) {
 
     const title = document.createElement('h3');
     title.classList.add('m-plus-rounded-1c-black', 'text-white');
+    title.style.marginTop = '-4.5rem';
     title.textContent = 'Your Order:';
 
     const orderDescription = document.createElement('h2');

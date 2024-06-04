@@ -123,6 +123,12 @@ html {
   margin: auto;
 }
 
+#orderProcessed,
+#homeOrder {
+  width: 100%;
+  overflow: hidden;
+}
+
 nav {
   position: absolute;
   padding: 44px 40px;
@@ -442,7 +448,13 @@ li label p {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
+  #apresentacao,
+  #wrapperOrderPlaced,
+  order {
+    min-height: 670px;
+  }
+
   nav {
     width: 100%;
   }
@@ -538,7 +550,7 @@ li label p {
 
   #preparo div:nth-child(1) img {
     margin-top: 10%;
-    width: 160%;
+    width: 140%;
     max-width: 160%;
   }
 
