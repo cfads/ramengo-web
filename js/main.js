@@ -5,6 +5,7 @@ import { OrderNowClickEvent } from "./events/orderNowClickEvent.js";
 import { SubmitOrderEvent } from "./events/submitOrderEvent.js";
 import { FetchBroths } from "./modules/broths/fetchBroths.js";
 import { FetchProteins } from "./modules/broths/fetchProteins.js";
+import { HEADERS } from "./config/api.js"
 
 // Events
 LogoClickEvent();

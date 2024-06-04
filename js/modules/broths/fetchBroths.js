@@ -1,3 +1,4 @@
+import { OrderService } from "../../config/orderService.js";
 import { ChangeImageBrothEvent } from "../../events/changeImageBrothEvent.js";
 import { ChangeRadioBrothEvent } from "../../events/changeRadioBrothEvent.js";
 import { CreateOptionBroth } from "../carousel/createOptionBroth.js";
@@ -14,8 +15,7 @@ export async function FetchBroths() {
     listBroths.appendChild(Loader())
     const loader = document.querySelector("#listaCaldos .loader");
 
-    const data = await fetch('http://localhost:3000/broths')
-        .then(response => response.json())
+    const data = await OrderService().getBroths()
         .then(data => {
             loader.style.display = 'none';
 

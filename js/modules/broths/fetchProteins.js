@@ -1,3 +1,4 @@
+import { OrderService } from "../../config/orderService.js";
 import { ChangeImageProteinEvent } from "../../events/changeImageProteinEvent.js";
 import { ChangeRadioProteinEvent } from "../../events/changeRadioProteinEvent.js";
 import { CreateOptionProtein } from "../carousel/createOptionProtein.js";
@@ -14,8 +15,7 @@ export async function FetchProteins() {
     listProteins.appendChild(Loader())
     const loader = document.querySelector("#listaProteinas .loader");
 
-    const data = await fetch('http://localhost:3000/proteins')
-        .then(response => response.json())
+    const data = await OrderService().getProteins()
         .then(data => {
             loader.style.display = 'none';
 
