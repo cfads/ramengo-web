@@ -1,5 +1,5 @@
 import { FetchBroths } from "../broths/fetchBroths.js";
-import { FetchProteins } from "../broths/fetchProteins.js";
+import { FetchProteins } from "../proteins/fetchProteins.js";
 import { HandleResetHome } from "./handleResetHome.js";
 
 const containerHome = document.getElementById("homeOrder");
