@@ -1,9 +1,10 @@
+import { OrderService } from "../api/orderService.js";
 import { NavigateToOrderProcessed } from "../modules/navigation/navigateToOrderProcessed.js";
 
 const form = document.getElementById('pedidoForm');
 
 export function SubmitOrderEvent() {
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', async function (event) {
         event.preventDefault();
 
         const formData = new FormData(form);
@@ -14,6 +15,8 @@ export function SubmitOrderEvent() {
             proteinId: formData.get('carne')
         };
 
-        NavigateToOrderProcessed();
+        const responseOrder = await OrderService().postOrder(data)
+
+        NavigateToOrderProcessed(responseOrder);
     });
 }

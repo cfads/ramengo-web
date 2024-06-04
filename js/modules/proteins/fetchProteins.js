@@ -1,4 +1,4 @@
-import { OrderService } from "../../config/orderService.js";
+import { OrderService } from "../../api/orderService.js";
 import { ChangeImageProteinEvent } from "../../events/changeImageProteinEvent.js";
 import { ChangeRadioProteinEvent } from "../../events/changeRadioProteinEvent.js";
 import { CreateOptionProtein } from "../carousel/createOptionProtein.js";

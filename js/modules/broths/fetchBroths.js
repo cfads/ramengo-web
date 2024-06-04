@@ -1,4 +1,4 @@
-import { OrderService } from "../../config/orderService.js";
+import { OrderService } from "../../api/orderService.js";
 import { ChangeImageBrothEvent } from "../../events/changeImageBrothEvent.js";
 import { ChangeRadioBrothEvent } from "../../events/changeRadioBrothEvent.js";
 import { CreateOptionBroth } from "../carousel/createOptionBroth.js";

@@ -1,4 +1,4 @@
-import { GET_BROTHS, GET_PROTEINS, HEADERS, POST_ORDERS } from "./api.js"
+import { GET_BROTHS, GET_PROTEINS, HEADERS, POST_ORDERS } from "./configApi.js"
 
 export const OrderService = () => {
     const getBroths = async () => {
@@ -26,7 +26,7 @@ export const OrderService = () => {
             const response = await fetch(POST_ORDERS, {
                 method: 'POST',
                 headers: {
-                    ...HEADERS,
+                    ...HEADERS.headers,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(orderPayload)
